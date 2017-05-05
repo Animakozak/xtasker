@@ -240,7 +240,8 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_add) {
-            intent = new Intent(this, AddListActivity.class);
+//            intent = new Intent(this, AddListActivity.class);
+            intent = new Intent(this, AddListNewActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_inbox) {
             navItemIndex = 2;
