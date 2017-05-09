@@ -167,7 +167,8 @@ public class MainActivity extends AppCompatActivity
 
 
 
-        intent2 = new Intent(this, AddTaskActivity.class);
+//        intent2 = new Intent(this, AddTaskActivity.class);
+        intent2 = new Intent(this, AddTaskNew.class);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

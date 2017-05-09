@@ -21,7 +21,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- <activity -->
         <!-- android:name=".MainActivity" -->
@@ -53,6 +53,10 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.excitinglab.xtasker.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AddTaskNew"
+            android:label="New Task">
         </activity>
     </application>
 
