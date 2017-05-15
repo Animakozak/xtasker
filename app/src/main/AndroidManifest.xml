@@ -48,15 +48,18 @@
         <activity
             android:name=".AddListNewActivity"
             android:label="@string/title_activity_add_list_new"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="io.excitinglab.xtasker.MainActivity" />
         </activity>
         <activity
             android:name=".AddTaskNew"
-            android:label="New Task">
+            android:label="New Task"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.excitinglab.xtasker.MainActivity" />
         </activity>
     </application>
 

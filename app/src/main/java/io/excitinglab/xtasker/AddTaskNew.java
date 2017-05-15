@@ -11,8 +11,11 @@ import java.util.Date;
 import android.app.TimePickerDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
@@ -22,6 +25,12 @@ public class AddTaskNew extends AppCompatActivity implements DatePickerDialog.On
     int btnID;
     int hour_x, minute_x, day_x, month_x, year_x;
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.action_add_list, menu);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +44,12 @@ public class AddTaskNew extends AppCompatActivity implements DatePickerDialog.On
         minute_x = today.get(Calendar.MINUTE);
         btnDue = (TextView) findViewById(R.id.editDueDate);
         btnRem = (TextView) findViewById(R.id.editReminder);
+
+        Spinner dropdown = (Spinner)findViewById(R.id.spinner1);
+        String[] items = new String[]{"1", "2", "three"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        dropdown.setAdapter(adapter);
+
 
 
         btnDue.setOnClickListener(new View.OnClickListener() {
